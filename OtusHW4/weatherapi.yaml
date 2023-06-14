@@ -1,0 +1,116 @@
+openapi: 3.0.1
+info:
+  title: defaultTitle
+  description: defaultDescription
+  version: '0.1'
+servers:
+  - url: https://api.weatherapi.com
+paths:
+  /v1/current.json:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: q
+          in: query
+          schema:
+            type: string
+          example: moscow
+        - name: key
+          in: query
+          schema:
+            type: string
+          example: 6ff81caa0fb540f4b23232022230606
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  current:
+                    type: object
+                    properties:
+                      feelslike_c:
+                        type: number
+                      uv:
+                        type: number
+                      last_updated:
+                        type: string
+                      feelslike_f:
+                        type: number
+                      wind_degree:
+                        type: integer
+                      last_updated_epoch:
+                        type: integer
+                      is_day:
+                        type: integer
+                      precip_in:
+                        type: number
+                      wind_dir:
+                        type: string
+                      gust_mph:
+                        type: number
+                      temp_c:
+                        type: number
+                      pressure_in:
+                        type: number
+                      gust_kph:
+                        type: number
+                      temp_f:
+                        type: number
+                      precip_mm:
+                        type: number
+                      cloud:
+                        type: integer
+                      wind_kph:
+                        type: number
+                      condition:
+                        type: object
+                        properties:
+                          code:
+                            type: integer
+                          icon:
+                            type: string
+                          text:
+                            type: string
+                      wind_mph:
+                        type: number
+                      vis_km:
+                        type: number
+                      humidity:
+                        type: integer
+                      pressure_mb:
+                        type: number
+                      vis_miles:
+                        type: number
+                  location:
+                    type: object
+                    properties:
+                      localtime:
+                        type: string
+                      country:
+                        type: string
+                      localtime_epoch:
+                        type: integer
+                      name:
+                        type: string
+                      lon:
+                        type: number
+                      region:
+                        type: string
+                      lat:
+                        type: number
+                      tz_id:
+                        type: string
+              examples:
+                '0':
+                  value: >-
+                    {"location":{"name":"Moscow","region":"Moscow
+                    City","country":"Russia","lat":55.75,"lon":37.62,"tz_id":"Europe/Moscow","localtime_epoch":1686095496,"localtime":"2023-06-07
+                    2:51"},"current":{"last_updated_epoch":1686095100,"last_updated":"2023-06-07
+                    02:45","temp_c":9.0,"temp_f":48.2,"is_day":0,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png","code":1000},"wind_mph":4.3,"wind_kph":6.8,"wind_degree":270,"wind_dir":"W","pressure_mb":1020.0,"pressure_in":30.12,"precip_mm":0.0,"precip_in":0.0,"humidity":87,"cloud":0,"feelslike_c":7.8,"feelslike_f":46.0,"vis_km":10.0,"vis_miles":6.0,"uv":1.0,"gust_mph":10.3,"gust_kph":16.6}}
+      servers:
+        - url: https://api.weatherapi.com
+    servers:
+      - url: https://api.weatherapi.com
